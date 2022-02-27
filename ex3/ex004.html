@@ -9,7 +9,12 @@
 <body>
     <script>
         var nome = window.prompt("Qual seu nome")
-        document.write(`Seu nome tem ${nome.length}  letras `)
+        document.write(`Seu nome tem ${nome.length}  letras `) //escreve na cara do documento web 
+        
+        // converter par dinheiro do brasil
+        let valor = 1559.90
+        const novovalor = valor.toLocaleString('pt-Br', {style: 'currency', currency:'BRL'})
+        document.write(`O valor e ${novovalor} `)
 
     </script>
 </body>
