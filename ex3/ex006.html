@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos DOM</title>
+    <style>
+      #area {
+        background-color: rgb(43, 48, 48);
+        color: aliceblue;
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="area" >Iteragir ...</div>
+
+    <script>
+        const buton = window.document.getElementById('area')
+        buton.addEventListener('click' ,clicar )
+        buton.addEventListener('mouseenter', entrar)
+        buton.addEventListener('mouseout', sair)
+
+      function clicar() {
+        var ar = window.document.getElementById("area");
+        //ar.addEventListener('click', clicar())
+        ar.innerText = "Clicou";
+        ar.style.background = 'red'
+      }
+      function entrar(){
+          var et = window.document.getElementById('area')
+          //et.addEventListener('mouseenter' , entrar())
+          et.innerText = 'Entrou'
+          et.style.background = 'rgb(68, 177, 113)'
+      }
+      function sair(){
+          var sr = window.document.getElementById('area')
+          sr.innerText = "Saiu"
+          sr.style.background = 'rgb(216, 199, 43)'
+          //sr.addEventListener('mouseout' , sair())
+      }
+
+    </script>
+  </body>
+</html>
